@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { FaRegFileAlt } from "react-icons/fa";
-import { LuDownload } from "react-icons/lu";
+import { FaRegFileAlt, FaDownload } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { motion } from "framer-motion";
 
@@ -48,7 +47,7 @@ function Card({ data, reference }) {
         <div className='flex items-center justify-between px-8 py-3 mb-3'>
           <div><h5 className="text-white text-sm">{data.filesize}</h5></div>
           <div className="flex items-center">
-            {data.close ? <IoMdClose onClick={handleResetText} /> : <LuDownload size={20} fill='#ffffff' />}
+            {data.close ? <IoMdClose onClick={handleResetText} /> : <FaDownload size={20} fill='#ffffff' />}
           </div>
         </div>
         {data.tag.isopen ? (
